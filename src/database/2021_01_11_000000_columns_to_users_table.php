@@ -14,6 +14,7 @@ class columnsToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->string('password')->nullable()->change();
             $table->string('national_id')->unique()->nullable();
             $table->string('lang')->nullable();
             $table->string('arabic_name')->nullable();
