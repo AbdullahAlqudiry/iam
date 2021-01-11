@@ -20,6 +20,10 @@ Route::group(['middleware' => ['guest']], function () {
     Route::get('/login', [\App\Http\Controllers\IAMController::class, 'login'])->name('login');
     Route::get('/validate-login', [\App\Http\Controllers\IAMController::class, 'validateLogin'])->name('validateLogin');
 });
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/logout', [\App\Http\Controllers\IAMController::class, 'logout'])->name('logout');
+});
 ```
 
 

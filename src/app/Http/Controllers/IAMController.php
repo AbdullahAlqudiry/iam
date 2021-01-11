@@ -62,4 +62,10 @@ class IAMController extends Controller
             return redirect()->to(route('home'));
         }
     }
+
+    public function logout(Request $request)
+    {
+        auth()->logout();
+        return redirect()->to(route('home'));
+    }
 }
