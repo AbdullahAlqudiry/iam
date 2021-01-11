@@ -1,0 +1,27 @@
+{
+    "name": "alqudiry/iam",
+    "description": "Create iam login",
+    "authors": [
+        {
+            "name": "Abdullah Alqudiry",
+            "email": "abdullah.alqduiry@gmail.com"
+        }
+    ],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Alqudiry\\Iam\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alqudiry\\Iam\\IAMServiceProvider"
+            ]
+        }
+    }
+}
